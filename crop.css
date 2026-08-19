@@ -2,12 +2,16 @@
 .approach-photo img { object-position: center 18%; }
 .practice-photo img { object-position: center 18%; }
 .about-photo img { object-position: center 28%; }
-.event > img { object-position: center 18%; }
+.research-banner > img { object-position: center top; }
+.event:nth-of-type(1) > img,
+.event:nth-of-type(2) > img { object-position: center top; }
 
 @media (max-width: 900px) {
   .hero-photo img { object-position: center 16%; }
   .approach-photo img { object-position: center 16%; }
   .practice-photo img { object-position: center 16%; }
   .about-photo img { object-position: center 24%; }
-  .event > img { object-position: center 16%; }
+  .research-banner > img { object-position: center top; }
+  .event:nth-of-type(1) > img,
+  .event:nth-of-type(2) > img { object-position: center top; }
 }
