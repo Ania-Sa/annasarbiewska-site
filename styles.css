@@ -15,8 +15,8 @@
 @media(max-width:600px){.wrap{width:min(100% - 30px,1180px)}.topbar{height:74px}.brand svg{width:42px}.brand-copy strong{font-size:17px}.brand-copy small{font-size:8px}.menu{top:74px}.hero h1{font-size:51px}.hero-photo{min-height:520px}.academic-card{position:relative;transform:none;top:auto;right:auto;width:100%;background:var(--navy)}.manifest-grid,.section-title,.contact-grid{grid-template-columns:1fr;display:grid;gap:25px}.manifest-grid{padding:45px 0}.manifest blockquote{font-size:27px}.manifest p{padding-left:20px}.section{padding:55px 0}.area-grid,.pub-grid,.event-grid{grid-template-columns:1fr}.section-title h2,.approach h2,.contact h2{font-size:39px}.steps,.practice-cards{grid-template-columns:1fr 1fr}.project-row{grid-template-columns:1fr}.research-banner>img{width:100%;opacity:.25}.research-banner:after{background:#061f3eb8}.research-copy{padding:55px 0}.about-photo{height:390px}.footer-grid{grid-template-columns:1fr}.footer-note{text-align:left}}
 
 /* Readability refinements: preserve heading scale and enlarge supporting copy. */
-.hero-lead{font-size:18px}.hero-ai{font-size:17px}
-.manifest p,.section-title>p,.approach-copy>p,.research-copy>p,.practice-copy>p,.event-intro>p,.about-copy>p,.contact p{font-size:17px}
-.area p,.pub p,.event p{font-size:15px}
-.practice-card p,.project-row span,.project-row b{font-size:14px}
-.step span{font-size:13px}
+.hero-lead{font-size:19px}.hero-ai{font-size:18px}
+.manifest p,.section-title>p,.approach-copy>p,.research-copy>p,.practice-copy>p,.event-intro>p,.about-copy>p,.contact p{font-size:18px}
+.area p,.pub p,.event p{font-size:16px}
+.practice-card p,.project-row span,.project-row b{font-size:15px}
+.step span{font-size:14px}
