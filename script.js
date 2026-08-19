@@ -1,4 +1,4 @@
-const toggle = document.querySelector('.nav-toggle');
+const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
 if (toggle && menu) {
@@ -12,4 +12,4 @@ if (toggle && menu) {
   }));
 }
 
-document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
