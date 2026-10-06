@@ -15,3 +15,14 @@
   .event:nth-of-type(1) > img,
   .event:nth-of-type(2) > img { object-position: center top; }
 }
+
+/* Portrait and text-only biography, shared by both languages. */
+.hero-photo > img { height: auto; object-fit: contain; }
+.hero-photo .academic-card { position: static; transform: none; width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; }
+.hero-photo .academic-card h3 { grid-column: 1 / -1; }
+.about-grid.about-grid-text-only { grid-template-columns: minmax(0, 1fr); gap: 0; }
+.about-grid-text-only .about-copy { max-width: 850px; }
+@media (max-width: 600px) {
+  .hero-photo { min-height: 0; }
+  .hero-photo .academic-card { grid-template-columns: minmax(0, 1fr); }
+}
