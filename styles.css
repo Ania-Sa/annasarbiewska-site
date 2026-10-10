@@ -22,4 +22,4 @@
 .step span{font-size:14px}
 .footer-disclaimer{grid-column:1/-1;border-top:1px solid #ffffff1f;padding-top:16px;text-align:center;color:#9fb0c2;font-size:11px;line-height:1.55}
 
-.visitor-counter{margin-top:10px;display:flex;justify-content:flex-end;align-items:center}.visitor-counter img{display:block;height:20px;max-width:100%}@media(max-width:600px){.visitor-counter{justify-content:flex-start}}
+.visitor-counter{margin-top:9px;display:flex;justify-content:flex-end;align-items:center;gap:7px;font-size:12px;line-height:1;color:#9fb0c2}.visitor-counter span{color:var(--gold2);letter-spacing:.08em;text-transform:uppercase;font-size:10px}.visitor-counter strong{color:#d9e3ec;font-weight:500;font-variant-numeric:tabular-nums}@media(max-width:600px){.visitor-counter{justify-content:flex-start}}
