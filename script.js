@@ -17,20 +17,18 @@ document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date
 
 const visitorCount = document.getElementById('visitor-count');
 if (visitorCount) {
-  const site = 'annasarbiewska.com';
-  const path = '/';
-  const base = 'https://page-views-api.ratneshc.com/api/v1';
+  const viewsUrl = 'https://page-views-api.ratneshc.com/api/v1/views?site=annasarbiewska.com&path=%2F';
 
-  fetch(`${base}/track?site=${encodeURIComponent(site)}&path=${encodeURIComponent(path)}`, { keepalive: true })
-    .catch(() => null)
-    .finally(() => {
-      fetch(`${base}/views?site=${encodeURIComponent(site)}&path=${encodeURIComponent(path)}`)
-        .then(response => response.ok ? response.json() : Promise.reject())
-        .then(data => {
-          visitorCount.textContent = new Intl.NumberFormat('pl-PL').format(data.views ?? 0);
-        })
-        .catch(() => {
-          visitorCount.closest('.visitor-counter')?.setAttribute('hidden', '');
-        });
-    });
+  const loadVisitorCount = () => {
+    fetch(viewsUrl)
+      .then(response => response.ok ? response.json() : Promise.reject())
+      .then(data => {
+        visitorCount.textContent = new Intl.NumberFormat('pl-PL').format(data.views ?? 0);
+      })
+      .catch(() => {
+        visitorCount.textContent = '—';
+      });
+  };
+
+  window.setTimeout(loadVisitorCount, 700);
 }
