@@ -17,18 +17,14 @@ document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date
 
 const visitorCount = document.getElementById('visitor-count');
 if (visitorCount) {
-  const viewsUrl = 'https://page-views-api.ratneshc.com/api/v1/views?site=annasarbiewska.com&path=%2F';
+  const counterUrl = 'https://counterapi.com/api/annasarbiewska.com/view/home?unique=true';
 
-  const loadVisitorCount = () => {
-    fetch(viewsUrl)
-      .then(response => response.ok ? response.json() : Promise.reject())
-      .then(data => {
-        visitorCount.textContent = new Intl.NumberFormat('pl-PL').format(data.views ?? 0);
-      })
-      .catch(() => {
-        visitorCount.textContent = '—';
-      });
-  };
-
-  window.setTimeout(loadVisitorCount, 700);
+  fetch(counterUrl)
+    .then(response => response.ok ? response.json() : Promise.reject())
+    .then(data => {
+      visitorCount.textContent = new Intl.NumberFormat('pl-PL').format(data.value ?? 0);
+    })
+    .catch(() => {
+      visitorCount.textContent = '—';
+    });
 }
